@@ -1,0 +1,11 @@
+This system uses a fairly simple algorithm that uses your code to encrypt and decrypt messages.
+
+
+Step 1: The first letter of the message (hello world in this example) goes through the ord() function to get it's ASCII character number (104 in the case of h).
+
+Step 2: The first number of the code (1 2 3 4 5 in this example) is added to the ASCII code. This means our new number is 105. 
+
+Step 3: The remainder of the size of the range (always 94) divided by the new number is calculated. In this case, because the number is only 105 (which is fully within the ASCII range), this step has no effect. When you are using larger numbers in your code, however, this figures out what number it will be if it needs to fit in the range.
+
+Step 4: The number then goes through the chr() function to get the character the number corresponds to. In this case, it would be i.
+This same process is then repeated for the second number in the code (2) and the second letter in the message (e). After this happens five times, the 6th item in the message uses the 1st item in the code (1), and so on.

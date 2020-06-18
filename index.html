@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Encrypter</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>Intelligence Encrypter</h1>
+      <p>V 1.0</p><hr>
+    </header>
+    <script src="script.js"></script>
+    <div id='about_section'>
+      <text id="about">This is a simple encryption platform that can encrypt any plaintext message (no numbers) into another, encrypted, plaintext message. All you need is a five number code.</text>
+      <a id='learn_more' href='https://repl.it/@PilotGuy/Encrypter-website#HowItWorks.txt'>Click here to learn more</a>
+    </div>
+    <div id='encrypt'>
+      <h2 id='encrypt_heading'>Encrypt or Decrypt!</h2>
+      <hr>
+      <li>First, click 'Enter Code' below, and enter five numbers of any positive value seperated by spaces. </li><li>Then, click 'Enter Message', and paste in your plaintext (no numbers) message</li> <li>Click 'Encrypt' and copy the resulting encrypted message.</li> When sending the message, make sure the recipient also has the five-number-code for decryption. Note that if you are encrypting, you can leave the code box blank for a random code.
+      </br>
+      <button id='enter_code' onClick='getCode(false)'>Enter Code</button> <button id='random' onClick='getCode(true)'>Random Code</button>
+      <p id='code_display'>_ _ _ _ _</p>
+      <br>
+      
+      <label id='label2'>
+      <textarea id='message' name = 'message' cols="25" rows="10">Enter a message...</textarea>
+      
+      </br>
+      <select id='e_or_d' onchange='switchMode(this.Value)'> 
+        <option value = ''>Select Mode</option>
+        <option value = 'enc'>Encrypt</option>
+        <option value = 'dec'>Decrypt</option>
+      </select>
+      <button id='start' onClick = 'start()'>GO!</button>
+    </div>
+  </body>
+</html>
